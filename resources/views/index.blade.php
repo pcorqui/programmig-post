@@ -6,5 +6,5 @@
         <h2 class="text xl text-gray-600">Fórmate como profesionale en tecnologia</h2>
         <h3 class="text xl text-gray-600">70% de los graduados duplican sus ingresos</h3>
     </div>
-    <!--<livewire:course-list>-->
+    <livewire:course-list>
 @endsection
