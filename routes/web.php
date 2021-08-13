@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,10 @@ use App\Http\Controllers\PageController;
 
 Route::get('/',[PageController::class,'home'])->name('home');
 Route::get('curso/{course:slug}',[PageController::class,'course'])->name('course');
+
+Route::post('postsave',[PostController::class,'savepost'])->name('savepost');
+Route::get('createpost',[PostController::class, 'indexPost'])->name('indexPost');
+Route::delete('post/{post}', [PostController::class,'destroy']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

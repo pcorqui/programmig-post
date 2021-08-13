@@ -24,7 +24,7 @@ class PostFactory extends Factory
         return [
             'name' => $this->faker->sentence,
             'free' => rand(0,1),
-
+            'content'=> $this->faker->text(500),
             'course_id'=>rand(1,10)
         ];
     }
