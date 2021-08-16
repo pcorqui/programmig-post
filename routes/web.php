@@ -22,6 +22,8 @@ Route::post('postsave',[PostController::class,'savepost'])->name('savepost');
 Route::get('createpost',[PostController::class, 'indexPost'])->name('indexPost');
 Route::delete('post/{post}', [PostController::class,'destroy']);
 
+Route::get('showpost', [PostController::class, 'showPost'])->name('showPost');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

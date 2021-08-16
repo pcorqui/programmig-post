@@ -11,6 +11,12 @@ class PostController extends Controller
         return view('post');
     }
 
+    public function showPost(){
+
+        return view('homePost',[
+            'posts' => Post::latest()->get()
+        ]);
+    }
 
     //save a post
     public function savepost(Request $request){
