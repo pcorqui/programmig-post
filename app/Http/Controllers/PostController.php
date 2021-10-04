@@ -18,6 +18,13 @@ class PostController extends Controller
         ]);
     }
 
+    public function listPosts(){
+        $todos = Post::all();
+        return view('postlist',[
+            'posts' => $todos
+        ]);
+    }
+
     //save a post
     public function savepost(Request $request){
         $name = $request->input('nombre');
@@ -33,9 +40,16 @@ class PostController extends Controller
         return back();
     }
 
+
     public function destroy(Post $post){
         $post->delete();
         return back();
+    }
+
+    public function post(Post $post){
+        //aqui retornare una vista con el post
+        return "si llego aqui " . $post->name;
+
     }
 
 }

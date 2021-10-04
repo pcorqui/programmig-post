@@ -12,8 +12,12 @@
 
                 <div class="grid grid-cols-12 gap-12">
                     <div class="grid grid-cols-2">
-                        <label for="nombre" class="block text-sm font-medium text-gray-700">nombre</label>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700">nombre del post</label>
                         <input type="text" name="nombre" id="nombre" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                    <div class="grid grid-cols-2">
+                        <label for="url" class="block text-sm font-medium text-gray-700">url(para guardar el url del proyecto)</label>
+                        <input type="text" name="url" id="url" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                     </div>
                     <div>
                         <label for="about" class="block text-sm font-medium text-gray-700">
@@ -25,7 +29,7 @@
                     </div>
                     <div>
                         @csrf
-                        <button class="bg-indigo-600 rounded-md" type="submit" >Enviar</button>
+                        <button type="submit" >Enviar</button>
                     </div>
                 </div>
             </div>
